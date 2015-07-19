@@ -6,7 +6,7 @@ namespace :php_fpm do
     end
   end
 
-  after 'deploy:updated', 'php_fpm:reload'
+  after 'deploy:published', 'php_fpm:reload'
 end
 
 namespace :load do
