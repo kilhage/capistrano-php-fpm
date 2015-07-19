@@ -35,8 +35,8 @@ or can be run in isolation with `cap production php_fpm:reload`
 Configurable options:
 
 ```ruby
-set :nginx_reload_command, '/etc/init.d/php-fpm reload' # default
-set :nginx_roles, :all # default
+set :php_fpm_reload_command, '/etc/init.d/php-fpm reload' # default
+set :php_fpm_roles, :all # default
 ```
 
 ## Development
