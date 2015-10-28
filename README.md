@@ -1,6 +1,8 @@
 # Capistrano::PhpFpm
 
-capistrano-php-fpm support for Capistrano 3.x
+php-fpm support for Capistrano 3.x
+
+Makes it possible to reload/restart php-fpm during deploys
 
 ## Installation
 
@@ -27,14 +29,22 @@ Require in Capfile to use the default task:
 require 'capistrano/php-fpm'
 ```
 
-The task will run after `deploy:published` as part of Capistrano's default deploy,
-or can be run in isolation with `cap production php_fpm:reload`
+Configure in deploy.rb to execute one of the tasks:
+
+```ruby
+after 'deploy:published', 'php_fpm:reload'
+after 'deploy:published', 'php_fpm:restart'
+```
+
+You can also run it in isolation: `cap production php_fpm:reload` or `cap production php_fpm:restart`
 
 Configurable options:
 
 ```ruby
-set :php_fpm_reload_command, '/etc/init.d/php-fpm reload' # default
-set :php_fpm_roles, :all # default
+set :php_fpm_reload_roles, :all
+set :php_fpm_reload_command, '/etc/init.d/php-fpm reload'
+set :php_fpm_restart_roles, :all
+set :php_fpm_restart_command, '/etc/init.d/php-fpm reload'
 ```
 
 ## Development

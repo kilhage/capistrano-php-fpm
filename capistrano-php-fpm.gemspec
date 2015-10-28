@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "capistrano-php-fpm"
-  spec.version       = '0.1.2'
+  spec.version       = '1.0.0'
   spec.authors       = ["Emil Kilhage"]
   spec.email         = ["emil.kilhage@glooby.com"]
 
-  spec.summary       = %q{nginx support for Capistrano 3.x}
-  spec.description   = %q{nginx support for Capistrano 3.x}
+  spec.summary       = %q{php-fpm support for Capistrano 3.x}
+  spec.description   = %q{php-fpm support for Capistrano 3.x}
   spec.homepage      = "https://github.com/glooby/capistrano-php-fpm"
   spec.license       = "MIT"
 
