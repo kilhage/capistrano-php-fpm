@@ -1,5 +1,7 @@
 # Capistrano::PhpFpm
 
+[![Gem Version](https://badge.fury.io/rb/capistrano-php-fpm.svg)](https://badge.fury.io/rb/capistrano-php-fpm)
+
 php-fpm support for Capistrano 3.x
 
 Makes it possible to reload/restart php-fpm during deploys
